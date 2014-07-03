@@ -6,7 +6,11 @@ describe("About Functions", function() {
       return a + b;
     }
 
+<<<<<<< HEAD
     expect(add(1, 2)).toBe(1 + 2);
+=======
+    expect(add(1, 2)).toBe(3);
+>>>>>>> josh
   });
 
   it("should know internal variables override outer variables", function () {
@@ -21,9 +25,15 @@ describe("About Functions", function() {
       return message;
     }
 
+<<<<<<< HEAD
     expect(getMessage()).toBe(message);
     expect(overrideMessage()).toBe("Inner");
     expect(message).toBe(getMessage());
+=======
+    expect(getMessage()).toBe("Outer");
+    expect(overrideMessage()).toBe("Inner");
+    expect(message).toBe("Outer");
+>>>>>>> josh
   });
 
   it("should have lexical scoping", function () {
@@ -61,7 +71,11 @@ describe("About Functions", function() {
       return firstArg;
     }
 
+<<<<<<< HEAD
     expect(returnFirstArg("first", "second", "third")).toBe("first", "second", "third");
+=======
+    expect(returnFirstArg("first", "second", "third")).toBe("first");
+>>>>>>> josh
 
     function returnSecondArg(firstArg, secondArg) {
       return secondArg;
